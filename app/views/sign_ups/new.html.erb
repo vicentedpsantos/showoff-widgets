@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown m-3">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <%= image_tag 'logo.png', id: 'icon', class: 'm-5' %>
+    </div>
+
+    <!-- Signup Form -->
+    <%= form_tag(controller: 'sign_ups', action: 'create', method: 'post') do %>
+      <input type="text" id="first_name" class="fadeIn second" name="first_name" placeholder="First Name" required>
+      <input type="text" id="last_name" class="fadeIn second" name="last_name" placeholder="Last Name" required>
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="E-mail" required>
+      <input type="password" id="password" class="fadeIn second" name="password" placeholder="Password" required>
+      <input type="text" id="image_url" class="fadeIn second" name="image_url" placeholder="Image URL" required>
+      <input type="submit" class="fadeIn fourth" value="Sign Up">
+    <% end %>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <%= link_to 'Already have an account? Log in', new_sign_in_path, class: 'underlineHover' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="home-index">
+  <div class="row w-100 d-flex justify-content-between text-justify">
+    <h4 >Widgets Dashboard</h4>
+    <%= link_to 'Create New Widget', new_widget_path, class: "btn btn-sm pull-right align-self-center font-weight-bold" %>
+  </div>
+  <div class="card-deck">
+    <% if @widgets.empty? %>
+      <p class="mt-5 align-self-center mx-auto">Start creating your widgets</p>
+    <% else %>
+      <% @widgets.each do |widget| %>
+        <div class="card m-3 rounded">
+          <%= image_tag widget.user_images["original_url"], class: 'card-img-top rounded-top' %>
+          <div class="card-body">
+            <h5 class="card-title"><%= widget.name %></h5>
+            <p class="card-text"><%= widget.description %></p>
+            <p class="card-text"><small>Created by <%= widget.user_name %> (<%= widget.user_id %>)</small></p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <%= link_to 'Delete Widget', { action: :destroy, id: widget.id }, class: 'font-weight-bold btn btn-sm btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

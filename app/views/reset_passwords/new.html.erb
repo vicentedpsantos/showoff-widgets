@@ -1,0 +1,23 @@
+<div class="wrapper fadeInDown m-3">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <%= image_tag 'logo.png', id: 'icon', class: 'm-5' %>
+    </div>
+
+    <!-- Signup Form -->
+    <%= form_tag(controller: 'reset_passwords', action: 'create', method: 'post') do %>
+      <p class="m-3">Please enter your email to start a password reset process.</p>
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="E-mail" required>
+      <input type="submit" class="fadeIn fourth" value="Submit">
+    <% end %>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <%= link_to 'Don\'t have an account yet? Sign up', new_sign_up_path, class: 'underlineHover' %>
+      <%= link_to 'Forgot your password?', new_sign_in_path, class: 'underlineHover' %>
+    </div>
+  </div>
+</div>

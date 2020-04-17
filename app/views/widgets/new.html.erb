@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown m-3">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Signup Form -->
+    <%= form_tag(controller: 'widgets', action: 'create', method: 'post') do %>
+      <input type="text" id="name" class="fadeIn second" name="name" placeholder="Widget name" maxlength="20" required>
+      <input type="text" id="description" class="fadeIn second" name="description" maxlength="80" placeholder="Brief widget description" required>
+
+
+      <div>
+        <p>Setting your widget to visible will make it public to other people.</p>
+      </div>
+
+       <div class="fadeIn third">
+        <input type="radio" name="visible" value="hidden"> Hidden <br>
+        <input type="radio" name="visible" value="visible" checked> Visible <br>
+      </div>
+      <div>
+        <input type="submit" class="fadeIn fourth" value="Submit">
+      </div>
+    <% end %>
+  </div>
+</div>

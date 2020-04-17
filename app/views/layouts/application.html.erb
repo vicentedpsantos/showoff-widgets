@@ -10,6 +10,50 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <%= image_tag 'logo.png', class: 'santos-logo' %>
+          <ul class="navbar-nav mr-auto mt-2">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Widgets</a>
+            </li>
+          </ul>
+          <div class="form-inline my-2">
+            <% if session["current_token"] %>
+              <%= link_to 'My Widgets', widgets_path, class: 'nav-link my-lg-0' %>
+              <%= link_to 'Log out', sign_in_path, method: 'delete', class: 'nav-link my-lg-0' %>
+            <% else %>
+              <%= link_to 'Sign In', new_sign_in_path, class: 'nav-link my-lg-0' %>
+            <% end %>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container my-5">
+      <%= render 'shared/flash' %>
+      <div class="content-container">
+        <%= yield %>
+      </div>
+    </div>
   </body>
+  <footer class="footer mt-5">
+    <div class="container">
+      <%= image_tag 'logo.png', class: 'santos-logo santos-logo-footer' %>
+      <ul class="footer-list">
+        <li class="footer-list-item linkedin-icon">
+          <a href="https://www.linkedin.com/in/vicente-santos-7b023390/"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li class="footer-list-item facebook-icon">
+          <a href="https://www.facebook.com/vicentedpsantos"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li class="footer-list-item github-icon">
+          <a href="https://www.github.com/vicentedpsantos"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </html>

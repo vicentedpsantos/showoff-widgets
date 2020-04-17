@@ -1,0 +1,14 @@
+<div class="home-index">
+  <div class="card-deck">
+    <% @widgets.each do |widget| %>
+      <div class="card m-3 rounded">
+        <%= image_tag widget.user_images["original_url"], class: 'card-img-top rounded-top' %>
+        <div class="card-body">
+          <h5 class="card-title"><%= widget.name %></h5>
+          <p class="card-text"><%= widget.description %></p>
+          <p class="card-text"><small>Created by <%= widget.user_name %> (<%= widget.user_id %>)</small></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,127 @@
+$japanese-indigo: #223843;
+$anti-flash-white: #EFF1F3;
+$timberwolf: #DBD3D8;
+$pastel-pink: #D8B4A0;
+$terra-cotta: #D77A61;
+
+.content-container {
+  margin-bottom: 100px;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: #fff !important;
+}
+
+.btn {
+  background-color: $pastel-pink;
+  transition: 0.8s;
+}
+
+.btn:hover {
+  background-color: $terra-cotta;
+}
+
+.btn-danger {
+  background-color: red !important;
+}
+
+p {
+  color: $japanese-indigo;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.santos-logo {
+  height: 4em;
+  margin: 15px;
+}
+
+.nav-link {
+  color: $pastel-pink;
+  font-weight: bold;
+  transition: 0.8s;
+  margin: 10px;
+}
+
+.nav-link:hover {
+  color: $terra-cotta;
+}
+
+header {
+  background-color: $japanese-indigo;
+}
+
+.card {
+  min-width: 250px;
+  max-width: 250px;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: $japanese-indigo;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer {
+  background-color: $japanese-indigo;
+  color: #bababa;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.footer-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.footer-list-item {
+  margin: 0 20px;
+}
+
+.footer-list-item a {
+  font-size: 2.5em;
+  color: #bababa;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+.movie-rating i:hover {
+  color: #e74c3c;
+}
+
+.linkedin-icon a:hover {
+  color: #55acee;
+}
+
+.facebook-icon a:hover {
+  color: #3b5998;
+}
+
+.github-icon a:hover {
+  color: #e95950;
+}
+
+.santos-logo-footer {
+  height: 1.8em;
+}
